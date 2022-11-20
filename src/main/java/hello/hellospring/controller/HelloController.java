@@ -37,7 +37,7 @@ public class HelloController {
     public Hello helloApi(@RequestParam("name") String name) {
         Hello hello = new Hello();
         hello.setName(name);
-        return hello;
+        return hello;  // 객체전달하면 json 형태로 전달
     }
 
     static class Hello {
@@ -51,6 +51,7 @@ public class HelloController {
         public void setName(String name) {
             this.name = name;
         }
+
     }
 
 }
